@@ -32,7 +32,7 @@ class Suprematism(QWidget):
 
     def draw(self):
         R = randint(20, 1000)
-        self.qp.setBrush(QColor('pink'))
+        self.qp.setBrush(QColor(*[randint(0, 255) for x in range(3)]))
         self.qp.drawEllipse(int(self.coords_[0] - R / 2),
                             int(self.coords_[1] - R / 2), R, R)
 
